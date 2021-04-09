@@ -12,7 +12,7 @@ var router *gin.Engine
 
 func main() {
 	// Set Gin to production mode
-	gin.SetMode(gin.ReleaseMode)
+	// gin.SetMode(gin.ReleaseMode)
 
 	// Set the router as the default one provided by Gin
 	router = gin.Default()
@@ -25,7 +25,7 @@ func main() {
 	initializeRoutes()
 
 	// Start serving the application
-	router.Run()
+	router.Run("localhost:8080")
 }
 
 // Render one of HTML, JSON or CSV based on the 'Accept' header of the request
